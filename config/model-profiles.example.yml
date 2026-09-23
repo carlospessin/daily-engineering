@@ -1,0 +1,18 @@
+# Copy and adapt this file for the model provider available in your runtime.
+
+provider: generic
+budget: balanced
+models:
+  - name: fast-model
+    capabilities: [fast, coding, tool-use]
+    cost: low
+  - name: balanced-model
+    capabilities: [fast, coding, tool-use, long-context]
+    cost: medium
+  - name: reasoning-model
+    capabilities: [coding, deep-reasoning, tool-use, long-context]
+    cost: high
+
+escalation:
+  enabled: true
+  max_attempts_before_escalation: 2
